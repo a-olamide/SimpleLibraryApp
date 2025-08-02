@@ -31,7 +31,7 @@ jobs:
       run: mvn clean package
       
     - name: Uplaod JAR artifact
-      uses: action/upload-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
         name: simple-library-system
         path: target/*.jar
