@@ -3,24 +3,14 @@ package model;
 import java.time.LocalDate;
 
 public class Borrowing {
-    private Member member;
     private Book book;
     private LocalDate borrowDate;
     private LocalDate returnDate;
 
-    public Borrowing(Member member, Book book, LocalDate borrowDate, LocalDate returnDate) {
-        this.member = member;
+    public Borrowing( Book book, LocalDate borrowDate, LocalDate returnDate) {
         this.book = book;
         this.borrowDate = borrowDate;
         this.returnDate = returnDate;
-    }
-
-    public Member getMember() {
-        return member;
-    }
-
-    public void setMember(Member member) {
-        this.member = member;
     }
 
     public Book getBook() {
@@ -50,7 +40,6 @@ public class Borrowing {
     @Override
     public String toString() {
         return "Borrowing{" +
-                "member=" + member.toString() + " " + member.getLastName() +
                 ", book=" + book.toString() +
                 ", borrowDate=" + borrowDate +
                 ", returnDate=" + returnDate +
