@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,9 @@ public class Member {
         borrowings = new ArrayList<Borrowing>();
     }
 
+    public int getAge() {
+        return Period.between(dateOfBirth, LocalDate.now()).getYears();
+    }
     public void addBorrowing(Borrowing borrowing) {
         borrowings.add(borrowing);
     }
